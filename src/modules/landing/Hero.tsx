@@ -4,11 +4,11 @@ import { ArrowRight } from "iconsax-react";
 const Hero = () => {
   return (
     <section className="w-full">
-      <h1 className="font-light text-[80px] md:text-[248px] text-black text-center py-5">
+      <h1 className="font-light text-[80px] sm:text-[90px] md:text-[160px] lg:text-[248px] text-black text-center py-5">
         {" "}
         Asaniyan{" "}
       </h1>
-      <section className="w-full bg-[#C43030] relative px-5 py-2.5">
+      <section className="w-full bg-[#C43030] relative px-5 max-md:py-2.5">
         <section className="relative w-full max-w-[1300px] mx-auto">
           <div className="w-full md:w-[85%] mx-auto">
             <img src={dummyHero} alt="dummyHero" className="object-cover" />

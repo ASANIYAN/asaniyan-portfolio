@@ -20,7 +20,7 @@ const Help = () => {
       <section className="space-y-16 mt-10">
         {helpOptions.map((item, index) => (
           <div key={index} className="space-y-4">
-            <h2 className="font-light text-center text-[80px] sm:text-[90px] md:text-[220px] leading-[88px] md:leading-[184px]">
+            <h2 className="font-light text-center text-[80px] sm:text-[90px] md:text-[160px] lg:text-[220px] leading-[88px] md:leading-[184px]">
               {item.title}
             </h2>
             <ul className="flex flex-wrap gap-4 items-center justify-center text-sm uppercase">
