@@ -1,4 +1,5 @@
 import "./App.css";
+import Awards from "./modules/landing/Awards";
 import Help from "./modules/landing/Help";
 import Hero from "./modules/landing/Hero";
 import Navbar from "./modules/landing/Navbar";
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Help />
       <Works />
+      <Awards />
     </section>
   );
 }

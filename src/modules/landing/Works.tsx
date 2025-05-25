@@ -7,7 +7,7 @@ import dummyImgFour from "@/assets/dummyImgFour.webp";
 const Works = () => {
   const workOptions = ["Works", "*", "Works", "*", "Works", "*"];
   return (
-    <section className="mt-[72px] md:mt-[200px]">
+    <section className="mt-[72px] md:mt-[200px] w-full max-w-[1400px] mx-auto">
       <div className="border-y border-y-black">
         <InfiniteMarquee
           images={[]}

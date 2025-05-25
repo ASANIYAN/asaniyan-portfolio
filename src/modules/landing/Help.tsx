@@ -15,7 +15,7 @@ const Help = () => {
   ];
 
   return (
-    <section className="w-full max-w-[1300px] mx-auto mt-[72px] md:mt-[120px] text-black px-5">
+    <section className="w-full max-w-[1400px] mx-auto mt-[72px] md:mt-[120px] text-black px-5">
       <p className="text-xl text-center"> Here is how I can help </p>
       <section className="space-y-16 mt-10">
         {helpOptions.map((item, index) => (

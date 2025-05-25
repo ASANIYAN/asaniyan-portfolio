@@ -9,7 +9,7 @@ const Hero = () => {
         Asaniyan{" "}
       </h1>
       <section className="w-full bg-[#C43030] relative px-5 max-md:py-2.5">
-        <section className="relative w-full max-w-[1300px] mx-auto">
+        <section className="relative w-full max-w-[1400px] mx-auto">
           <div className="w-full md:w-[85%] mx-auto">
             <img src={dummyHero} alt="dummyHero" className="object-cover" />
           </div>
@@ -34,7 +34,7 @@ const Hero = () => {
       </section>
 
       <section className="w-full border-b border-b-black">
-        <section className="w-full max-w-[1300px] mx-auto flex flex-col md:flex-row items-center gap-5 text-black">
+        <section className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-5 text-black">
           <div className="w-full md:w-[73.3%] max-md:px-5 max-md:border-b max-md:border-b-black md:border-r md:border-r-black py-5">
             <p className="w-full max-w-[427px] text-xl font-light">
               I create art that captivates both visually and emotionally, while
