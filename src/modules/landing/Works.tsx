@@ -43,7 +43,7 @@ const Works = () => {
 
       <section className="flex flex-col-reverse md:flex-row text-black">
         <div className="px-5 md:px-8 py-8 md:h-[600px] flex max-lg:gap-2.5 flex-col lg:flex-row justify-end lg:justify-between items-end flex-1">
-          <p className="w-full lg:max-w-[380px] ml-auto font-light">
+          <p className="w-full lg:max-w-[380px] mr-auto font-light">
             A fusion of geometric shapes, Morphic was created to challenge
             traditional perceptions of space and structure. This project was a
             collaboration with a leading design firm and later adapted for an
@@ -92,7 +92,7 @@ const Works = () => {
 
       <section className="flex flex-col-reverse md:flex-row text-black">
         <div className="px-5 md:px-8 py-8 md:h-[600px] flex max-lg:gap-2.5 flex-col lg:flex-row justify-end lg:justify-between items-end flex-1">
-          <p className="w-full lg:max-w-[380px] ml-auto font-light">
+          <p className="w-full lg:max-w-[380px] mr-auto font-light">
             Forma is a collection of minimalist, functional designs created for
             digital experiences. Focused on clean lines and effortless
             usability, this project bridges the gap between art and intuitive
