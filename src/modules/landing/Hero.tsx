@@ -1,13 +1,37 @@
 import dummyHero from "@/assets/dummyHero.png";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
 import { ArrowRight } from "iconsax-react";
+import { useEffect } from "react";
+
+gsap.registerPlugin(SplitText);
 
 const Hero = () => {
+  useEffect(() => {
+    SplitText.create("#heroHeading", {
+      type: "chars",
+      charsClass: "char",
+    });
+
+    gsap.to(".char", {
+      y: 0,
+      stagger: 0.04,
+      delay: 0.2,
+      duration: 0.1,
+    });
+  }, []);
+
   return (
     <section className="w-full">
-      <h1 className="font-light text-[80px] sm:text-[90px] md:text-[160px] lg:text-[248px] text-black text-center py-5">
-        {" "}
-        Asaniyan{" "}
-      </h1>
+      <div className="h-[250px] md:h-[400px] flex justify-center items-center">
+        <h1
+          id="heroHeading"
+          className="font-light text-[70px] min-[340px]:text-[80px] sm:text-[90px] leading-[150px] md:leading-[220px] h-fit md:text-[160px] lg:text-[248px] text-black text-center py-5"
+        >
+          {" "}
+          Asaniyan{" "}
+        </h1>
+      </div>
       <section className="w-full bg-[#C43030] relative px-5 max-md:py-2.5">
         <section className="relative w-full max-w-[1400px] mx-auto">
           <div className="w-full md:w-[85%] mx-auto">
