@@ -1,3 +1,4 @@
+import UnderlineAnimation from "@/components/UnderlineAnimation";
 import { Asterisk } from "lucide-react";
 
 const Footer = () => {
@@ -11,10 +12,10 @@ const Footer = () => {
       <section className="w-full border-t border-t-black md:border-y md:border-y-black h-[178px]">
         <ul className="w-full h-full uppercase font-medium text-sm text-black grid grid-cols-1 md:grid-cols-3">
           <li className="max-md:h-[146px] border-b border-b-black md:border-r md:border-r-black flex justify-center items-center">
-            <ul className="space-y-2">
-              <li>WORKS</li>
-              <li>AWARDS</li>
-              <li>CONTACT</li>
+            <ul className="space-y-5">
+              <UnderlineAnimation>WORKS</UnderlineAnimation>
+              <UnderlineAnimation>AWARDS</UnderlineAnimation>
+              <UnderlineAnimation>CONTACT</UnderlineAnimation>
             </ul>
           </li>
           <li className="border-b border-b-black md:border-r md:border-r-black flex justify-center items-center max-md:h-[86px]">
