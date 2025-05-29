@@ -8,7 +8,7 @@ const Navbar = () => {
           <UnderlineAnimation>Works</UnderlineAnimation>
         </li>
         <li className="border-r border-r-black flex justify-center items-center">
-          <UnderlineAnimation>Awards</UnderlineAnimation>
+          <UnderlineAnimation>Contributions</UnderlineAnimation>
         </li>
         <li className="border-r border-r-black flex justify-center items-center">
           <UnderlineAnimation>Contacts</UnderlineAnimation>

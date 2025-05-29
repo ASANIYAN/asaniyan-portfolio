@@ -14,7 +14,7 @@ const Footer = () => {
           <li className="max-md:h-[146px] border-b border-b-black md:border-r md:border-r-black flex justify-center items-center">
             <ul className="space-y-5">
               <UnderlineAnimation>WORKS</UnderlineAnimation>
-              <UnderlineAnimation>AWARDS</UnderlineAnimation>
+              <UnderlineAnimation>CONTRIBUTIONS</UnderlineAnimation>
               <UnderlineAnimation>CONTACT</UnderlineAnimation>
             </ul>
           </li>
