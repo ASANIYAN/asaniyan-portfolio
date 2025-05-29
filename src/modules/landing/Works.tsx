@@ -53,7 +53,10 @@ const Works = () => {
   }, []);
 
   return (
-    <section className="mt-[72px] md:mt-[200px] w-full max-w-[1400px] mx-auto">
+    <section
+      id="works"
+      className="mt-[72px] md:mt-[200px] w-full max-w-[1400px] mx-auto"
+    >
       <div className="border-y border-y-black">
         <InfiniteMarquee
           images={[]}
@@ -108,7 +111,7 @@ const Works = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.doja.studio/"
-                className="lg:[writing-mode:sideways-lr] text-gray-400"
+                className="lg:[writing-mode:sideways-lr] text-gray-400 hover:text-black duration-300 transition-all"
               >
                 {" "}
                 {"[ View Site ]"}{" "}
@@ -145,7 +148,7 @@ const Works = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://mysoftcanada.ca/"
-                className="lg:[writing-mode:sideways-lr] text-gray-400"
+                className="lg:[writing-mode:sideways-lr] text-gray-400 hover:text-black duration-300 transition-all"
               >
                 {" "}
                 {"[ View Site ]"}{" "}
@@ -201,7 +204,7 @@ const Works = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://auditbar.com/"
-                className="lg:[writing-mode:sideways-lr] text-gray-400"
+                className="lg:[writing-mode:sideways-lr] text-gray-400 hover:text-black duration-300 transition-all"
               >
                 {" "}
                 {"[ View Site ]"}{" "}

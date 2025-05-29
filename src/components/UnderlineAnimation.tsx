@@ -18,11 +18,13 @@ interface UnderlineAnimationProps {
   duration?: AnimationTiming;
   ease?: AnimationEase;
   underlineClassName?: string;
+  handleClick?: () => void;
   [key: string]: unknown; // For additional props
 }
 
 const UnderlineAnimation: React.FC<UnderlineAnimationProps> = ({
   children,
+  handleClick,
   className = "",
   duration = { enter: 0.4, leave: 0.3 },
   ease = { enter: "power2.out", leave: "power2.in" },
@@ -51,9 +53,16 @@ const UnderlineAnimation: React.FC<UnderlineAnimationProps> = ({
     }
   };
 
+  const handleItemClick = () => {
+    if (handleClick) {
+      handleClick();
+    }
+  };
+
   return (
     <div
       className={`relative cursor-pointer ${className}`}
+      onClick={handleItemClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       {...props}

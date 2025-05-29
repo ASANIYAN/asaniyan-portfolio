@@ -13,7 +13,10 @@ const Talk = () => {
   };
 
   return (
-    <section className="border-t border-t-black pt-14 md:pt-20 mt-16 md:mt-[88px]">
+    <section
+      id="contacts"
+      className="border-t border-t-black pt-14 md:pt-20 mt-16 md:mt-[88px]"
+    >
       <div className="text-black">
         {/* <p className="text-center text-xl"> Have an idea? </p> */}
         <h4 className="font-light text-center text-[80px] sm:text-[90px] md:text-[160px] lg:text-[220px] leading-[88px] md:leading-[184px]">

@@ -67,9 +67,17 @@ const Hero = () => {
             </p>
           </div>
           <div className="flex-1 flex flex-col text-sm py-5 max-md:px-5 w-full">
-            <span className="max-md:block"> {"[ DRIBBLE ]"} </span>
-            <span className="max-md:block"> {"[ INSTAGRAM ]"} </span>
-            <span className="max-md:block"> {"[ X ]"} </span>
+            <a
+              target="_blank"
+              className="max-md:block"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/ayomide-asaniyan/"
+            >
+              {" "}
+              {"[ LINKEDIN ]"}{" "}
+            </a>
+            {/* <span className="max-md:block"> {"[ INSTAGRAM ]"} </span>
+            <span className="max-md:block"> {"[ X ]"} </span> */}
           </div>
         </section>
       </section>

@@ -2,6 +2,12 @@ import UnderlineAnimation from "@/components/UnderlineAnimation";
 import { Asterisk } from "lucide-react";
 
 const Footer = () => {
+  function scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   return (
     <footer className="mt-[80px]">
       <div className="py-[93px] md:py-[96px] text-[82px] sm:text-[92px] md:text-[120px] text-black text-center font-light">
@@ -13,9 +19,17 @@ const Footer = () => {
         <ul className="w-full h-full uppercase font-medium text-sm text-black grid grid-cols-1 md:grid-cols-3">
           <li className="max-md:h-[146px] border-b border-b-black md:border-r md:border-r-black flex justify-center items-center">
             <ul className="space-y-5">
-              <UnderlineAnimation>WORKS</UnderlineAnimation>
-              <UnderlineAnimation>OSS</UnderlineAnimation>
-              <UnderlineAnimation>CONTACT</UnderlineAnimation>
+              <UnderlineAnimation handleClick={() => scrollToSection("works")}>
+                WORKS
+              </UnderlineAnimation>
+              <UnderlineAnimation handleClick={() => scrollToSection("oss")}>
+                OSS
+              </UnderlineAnimation>
+              <UnderlineAnimation
+                handleClick={() => scrollToSection("contacts")}
+              >
+                CONTACT
+              </UnderlineAnimation>
             </ul>
           </li>
           <li className="border-b border-b-black md:border-r lowercase md:border-r-black flex justify-center items-center max-md:h-[86px]">
