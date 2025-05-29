@@ -18,8 +18,10 @@ const Footer = () => {
               <UnderlineAnimation>CONTACT</UnderlineAnimation>
             </ul>
           </li>
-          <li className="border-b border-b-black md:border-r md:border-r-black flex justify-center items-center max-md:h-[86px]">
-            {"[ HELLO ]"} {"[ @ ]"} {"[ CLONIFY.IO ]"}
+          <li className="border-b border-b-black md:border-r lowercase md:border-r-black flex justify-center items-center max-md:h-[86px]">
+            <a href="mailto:ayomidepaulasaniyan@gmail.com">
+              {`[ ayomidepaulasaniyan@gmail.com ]`}
+            </a>
           </li>
           <li className="flex justify-center items-center max-md:h-[86px]">
             {"[ © ]"} {"[ 2025 ]"}{" "}
