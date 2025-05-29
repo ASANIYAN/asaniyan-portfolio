@@ -118,7 +118,7 @@ const InfiniteMarquee: React.FC<MarqueeProps> = ({
           style={{ columnGap: `${gap}px` }}
         >
           {texts.map((text, index) => (
-            <div key={index} className="flex justify-center items-center">
+            <div key={index} className="flex justify-center items-center w-fit">
               <p className={cn("text-xl", textClassName)}>{text}</p>
             </div>
           ))}

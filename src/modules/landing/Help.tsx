@@ -1,16 +1,16 @@
 const Help = () => {
   const helpOptions = [
     {
-      title: "Branding",
-      options: ["LOGO DESIGN", "BRAND IDENTITY", "GUIDELINES"],
+      title: "Web Dev.",
+      options: ["RESPONSIVE DESIGN", "CONCISE UX", "ACCESSIBILITY"],
     },
     {
-      title: "UI.UX",
-      options: ["WEB DESIGN", "FRAMER SITES", "DESIGN SYSTEMS"],
+      title: "Tools",
+      options: ["REACT", "NODE JS"],
     },
     {
-      title: "Motion",
-      options: ["3D ANIMATION", "2D ANIMATION"],
+      title: "Interactions",
+      options: ["FRAMER MOTION", "GSAP (GREENSOCK)"],
     },
   ];
 

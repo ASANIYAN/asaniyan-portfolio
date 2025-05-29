@@ -61,8 +61,9 @@ const Hero = () => {
         <section className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-5 text-black">
           <div className="w-full md:w-[73.3%] max-md:px-5 max-md:border-b max-md:border-b-black md:border-r md:border-r-black py-5">
             <p className="w-full max-w-[427px] text-xl font-light">
-              I create art that captivates both visually and emotionally, while
-              designing user interfaces that feel effortlessly intuitive.
+              Hi, I'm Ayomide Asaniyan, a front-end developer turning ideas and
+              designs into clean, responsive web experiences. Are you curious
+              about my skill? Take a tour.
             </p>
           </div>
           <div className="flex-1 flex flex-col text-sm py-5 max-md:px-5 w-full">
