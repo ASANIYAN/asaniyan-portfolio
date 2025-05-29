@@ -104,10 +104,15 @@ const Works = () => {
 
           <div className="px-5 md:px-8 py-8 flex max-lg:gap-2.5 flex-col lg:flex-row justify-end lg:justify-between items-end flex-1">
             <div className="max-lg:w-full h-fit lg:h-full flex flex-row lg:flex-col justify-start lg:justify-end gap-3 lg:gap-5">
-              <p className="lg:[writing-mode:sideways-lr] text-gray-400">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.doja.studio/"
+                className="lg:[writing-mode:sideways-lr] text-gray-400"
+              >
                 {" "}
-                {"[ 2025 ]"}{" "}
-              </p>
+                {"[ View Site ]"}{" "}
+              </a>
               <p className="lg:[writing-mode:sideways-lr] font-medium">
                 {"[ DOJA STUDIO ]"}
               </p>
@@ -136,10 +141,15 @@ const Works = () => {
             </p>
 
             <div className="max-lg:w-full h-fit lg:h-full flex flex-row lg:flex-col justify-start lg:justify-end gap-3 lg:gap-5">
-              <p className="lg:[writing-mode:sideways-lr] text-gray-400">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://mysoftcanada.ca/"
+                className="lg:[writing-mode:sideways-lr] text-gray-400"
+              >
                 {" "}
-                {"[ 2025 ]"}{" "}
-              </p>
+                {"[ View Site ]"}{" "}
+              </a>
               <p className="lg:[writing-mode:sideways-lr] font-medium">
                 {" "}
                 {"[ SoftCanada ]"}{" "}
@@ -187,10 +197,15 @@ const Works = () => {
 
           <div className="px-5 md:px-8 py-8 flex max-lg:gap-2.5 flex-col lg:flex-row justify-end lg:justify-between items-end flex-1">
             <div className="max-lg:w-full lg:h-full flex flex-row lg:flex-col justify-start lg:justify-end gap-3 lg:gap-5">
-              <p className="lg:[writing-mode:sideways-lr] text-gray-400">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://auditbar.com/"
+                className="lg:[writing-mode:sideways-lr] text-gray-400"
+              >
                 {" "}
-                {"[ 2024 ]"}{" "}
-              </p>
+                {"[ View Site ]"}{" "}
+              </a>
               <p className="lg:[writing-mode:sideways-lr] font-medium">
                 {"[ Auditbar ]"}
               </p>
