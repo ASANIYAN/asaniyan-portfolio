@@ -26,7 +26,7 @@ const Footer = () => {
                 OSS
               </UnderlineAnimation>
               <UnderlineAnimation
-                handleClick={() => scrollToSection("contacts")}
+                handleClick={() => scrollToSection("contact")}
               >
                 CONTACT
               </UnderlineAnimation>

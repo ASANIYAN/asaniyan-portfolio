@@ -14,7 +14,7 @@ const Talk = () => {
 
   return (
     <section
-      id="contacts"
+      id="contact"
       className="border-t border-t-black pt-14 md:pt-20 mt-16 md:mt-[88px]"
     >
       <div className="text-black">

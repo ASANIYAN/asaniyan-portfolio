@@ -22,8 +22,8 @@ const Navbar = () => {
           </UnderlineAnimation>
         </li>
         <li className="border-r border-r-black flex justify-center items-center">
-          <UnderlineAnimation handleClick={() => scrollToSection("contacts")}>
-            Contacts
+          <UnderlineAnimation handleClick={() => scrollToSection("contact")}>
+            Contact
           </UnderlineAnimation>
         </li>
       </ul>
