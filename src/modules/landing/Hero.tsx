@@ -1,7 +1,7 @@
-import dummyHero from "@/assets/dummyHero.png";
+// import dummyHero from "@/assets/dummyHero.png";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
-import { ArrowRight } from "iconsax-react";
+// import { ArrowRight } from "iconsax-react";
 import { useEffect } from "react";
 
 gsap.registerPlugin(SplitText);
