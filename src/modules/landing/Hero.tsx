@@ -39,17 +39,14 @@ const Hero = () => {
           </div>
 
           <section className="hidden md:flex flex-col justify-between items-center w-[100px] h-full top-0 right-0 absolute py-14">
-            <p className="text-sm text-white sideways-lr">
-              {" "}
-              {"[ PART OF THE SKY ]"}{" "}
-            </p>
+            <p className="text-sm text-white sideways-lr"> {"[ ASANIYAN ]"} </p>
             <ArrowRight size="32" color="#fff" className="sideways-lr" />
             <p className="text-sm sideways-lr text-white"> {"[ 2025 ]"} </p>
           </section>
 
           <section className="flex justify-between md:hidden mt-6">
             <div className="flex flex-col">
-              <p className="text-sm text-white"> {"[ PART OF THE SKY ]"} </p>
+              <p className="text-sm text-white"> {"[ ASANIYAN ]"} </p>
               <p className="text-sm  text-white"> {"[ 2025 ]"} </p>
             </div>
             <ArrowRight size="32" color="#fff" />
