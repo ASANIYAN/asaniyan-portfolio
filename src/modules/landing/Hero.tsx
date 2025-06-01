@@ -16,8 +16,8 @@ const Hero = () => {
     gsap.to(".char", {
       y: 0,
       stagger: 0.04,
-      delay: 0.2,
-      duration: 0.1,
+      // delay: 0.3,
+      duration: 0.2,
     });
   }, []);
 
