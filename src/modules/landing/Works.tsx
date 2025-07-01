@@ -60,7 +60,7 @@ const Works = () => {
       <div className="border-y border-y-black">
         <InfiniteMarquee
           images={[]}
-          duration={8}
+          duration={10}
           texts={workOptions}
           textClassName="text-black text-[92px] uppercase"
         />
