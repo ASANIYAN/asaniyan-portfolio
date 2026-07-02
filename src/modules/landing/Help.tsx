@@ -1,16 +1,16 @@
 const Help = () => {
   const helpOptions = [
     {
-      title: "Web Dev.",
-      options: ["RESPONSIVE DESIGN", "CONCISE UX", "ACCESSIBILITY"],
+      title: "Frontend",
+      options: ["REACT", "NEXT.JS", "TYPESCRIPT", "TAILWIND CSS", "ACCESSIBILITY (WCAG)"],
     },
     {
-      title: "Tools",
-      options: ["REACT", "NODE JS"],
+      title: "Backend",
+      options: ["NODE.JS", "NEST.JS", "FASTIFY", "POSTGRESQL", "REDIS"],
     },
     {
-      title: "Interactions",
-      options: ["FRAMER MOTION", "GSAP (GREENSOCK)"],
+      title: "Craft",
+      options: ["REAL-TIME SYSTEMS", "TESTING (JEST/VITEST)", "GSAP"],
     },
   ];
 

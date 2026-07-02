@@ -8,6 +8,11 @@ gsap.registerPlugin(SplitText);
 
 const Hero = () => {
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return;
+
     SplitText.create("#heroHeading", {
       type: "chars",
       charsClass: "char",
@@ -16,7 +21,6 @@ const Hero = () => {
     gsap.to(".char", {
       y: 0,
       stagger: 0.04,
-      // delay: 0.3,
       duration: 0.2,
     });
   }, []);
@@ -58,23 +62,29 @@ const Hero = () => {
         <section className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-5 text-black">
           <div className="w-full md:w-[73.3%] max-md:px-5 max-md:border-b max-md:border-b-black md:border-r md:border-r-black py-5">
             <p className="w-full max-w-[427px] text-xl font-light">
-              Hi, I'm Ayomide Asaniyan, a front-end developer turning ideas and
-              designs into clean, responsive web experiences. Are you curious
-              about my skill? Take a tour.
+              Hi, I'm Ayomide Asaniyan — a software engineer with 3+ years
+              building scalable, real-time web applications with React,
+              TypeScript, Next.js, and Node.js. I care about clean
+              architecture as much as clean interfaces.
             </p>
           </div>
-          <div className="flex-1 flex flex-col text-sm py-5 max-md:px-5 w-full">
+          <div className="flex-1 flex flex-col gap-2 text-sm py-5 max-md:px-5 w-full label-mono">
             <a
               target="_blank"
-              className="max-md:block"
+              className="press hover-ink w-fit"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/ayomide-asaniyan/"
             >
-              {" "}
-              {"[ LINKEDIN ]"}{" "}
+              {"[ LINKEDIN ]"}
             </a>
-            {/* <span className="max-md:block"> {"[ INSTAGRAM ]"} </span>
-            <span className="max-md:block"> {"[ X ]"} </span> */}
+            <a
+              target="_blank"
+              className="press hover-ink w-fit"
+              rel="noopener noreferrer"
+              href="https://github.com/ASANIYAN"
+            >
+              {"[ GITHUB ]"}
+            </a>
           </div>
         </section>
       </section>

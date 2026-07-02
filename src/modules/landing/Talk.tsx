@@ -51,7 +51,7 @@ const Talk = () => {
 
             <Button
               disabled={mutation.isPending}
-              className="flex justify-center items-center bg-black h-[52px] w-full py-2 px-4 rounded-none text-white font-semibold text-lg"
+              className="press flex justify-center items-center bg-black h-[52px] w-full py-2 px-4 rounded-none text-white font-semibold text-lg"
             >
               SEND
             </Button>
