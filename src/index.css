@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 body {
-  background-color: #eeeeee;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   font-family: "Geist", sans-serif;
 }
 
@@ -19,6 +20,18 @@ body {
 
 @theme {
   --color-black: #20242f;
+
+  /* design tokens — "reads like well-formatted source, not a poster" */
+  --color-bg: oklch(0.98 0.002 250);
+  --color-surface: oklch(0.965 0.003 250);
+  --color-text: oklch(0.22 0.01 260);
+  --color-muted-text: oklch(0.52 0.01 260);
+  --color-ink: oklch(0.55 0.16 250);
+  --color-diff-added: oklch(0.6 0.14 150);
+  --color-diff-removed: oklch(0.6 0.19 25);
+
+  --font-display: "Familjen Grotesk", sans-serif;
+  --font-mono: "Geist Mono", monospace;
 }
 
 @theme inline {
@@ -61,8 +74,8 @@ body {
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -134,5 +147,50 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* metadata gutter / bracket-notation system — reused identically across
+   Hero, Experience, Projects, OSS so the chrome reads like consistent
+   source-file annotation rather than one-off decoration */
+.label-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.bracket-label::before {
+  content: "[ ";
+}
+.bracket-label::after {
+  content: " ]";
+}
+
+.diff-added {
+  color: var(--color-diff-added);
+}
+.diff-removed {
+  color: var(--color-diff-removed);
+}
+
+/* buttons/links must feel responsive to press */
+.press {
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.press:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover-ink:hover {
+    color: var(--color-ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .press {
+    transition: none;
+  }
+  .press:active {
+    transform: none;
   }
 }

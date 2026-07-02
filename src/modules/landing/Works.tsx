@@ -1,54 +1,87 @@
 import InfiniteMarquee from "@/components/InfiniteMarquee";
 import gsap from "gsap";
-import { ScrollTrigger, TextPlugin } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
 
 const workOptions = [
   "JavaScript  ",
   "*",
-  "Tailwind",
+  "TypeScript",
   "*",
   "React",
   "*",
-  "TypeScript",
-  "*",
   "Next.js",
+  "*",
+  "NestJS",
   "*",
   "NodeJS",
   "*",
 ];
 
-gsap.registerPlugin(TextPlugin);
+type Project = {
+  index: string;
+  name: string;
+  description: string;
+  stack: string[];
+  href: string;
+  status?: string;
+};
+
+const projects: Project[] = [
+  {
+    index: "01",
+    name: "Meridian",
+    description:
+      "A real-time collaborative document editor — Google Docs–style continuous prose. Yjs CRDT sync over WebSocket, Redis pub/sub fan-out across server instances, and an AI chatbot that edits documents directly via Yjs operations.",
+    stack: ["React", "NestJS", "Yjs / CRDT", "Redis", "PostgreSQL", "WebSockets"],
+    href: "https://github.com/ASANIYAN/Meridian",
+  },
+  {
+    index: "02",
+    name: "Lyncs",
+    description:
+      "Production-grade URL shortener and analytics platform. Modular NestJS monolith on Fastify, Redis Streams for async click-tracking with a dedicated worker process, JWT + OTP authentication with refresh tokens.",
+    stack: ["React", "NestJS", "Fastify", "Redis", "PostgreSQL"],
+    href: "https://github.com/ASANIYAN/lyncs-frontend",
+  },
+  {
+    index: "03",
+    name: "Payment Gateway",
+    description:
+      "A payment processing API with a domain-driven, layered architecture: state-machine payment lifecycle, idempotency keys, circuit breaker for external bank calls, and background jobs for stuck-payment recovery.",
+    stack: ["Express", "TypeScript", "PostgreSQL"],
+    href: "https://github.com/ASANIYAN/payment-gateway",
+  },
+  {
+    index: "04",
+    name: "MagikInterior",
+    description:
+      "AI-powered interior design platform — users upload imagery, choose design criteria, and get instant AI-generated visual feedback via Replicate API integrations.",
+    stack: ["React", "TanStack Query", "Express", "PostgreSQL", "Replicate API"],
+    href: "https://github.com/ASANIYAN",
+  },
+];
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
   useEffect(() => {
-    gsap.to("#dojaText", {
-      scrollTrigger: {
-        trigger: "#dojaText",
-        start: "top 90%",
-      },
-      duration: 1,
-      text: `Doja Studio explores the intersection of creativity and commerce, using innovative design and strategic thinking to evoke meaningful connections between brands and their audiences.`,
-    });
-
-    gsap.to("#canadaText", {
-      scrollTrigger: {
-        trigger: "#canadaText",
-        start: "top 90%",
-      },
-      duration: 1,
-      opacity: 1,
-      // text: `SoftCanada bridges the gaps for seamless Canadian transitions, providing newcomers with essential resources and support to settle, succeed, and thrive in their new home.`,
-    });
-
-    gsap.to("#auditbarText", {
-      scrollTrigger: {
-        trigger: "#auditbarText",
-        start: "top 90%",
-      },
-      duration: 1,
-      text: `Auditbar turns invoicing headaches and simplifies inventory management into effortless growth, giving small businesses the tools to sell, track, and scale beyond their daily struggles.`,
+    const cards = gsap.utils.toArray<HTMLElement>(".project-card");
+    cards.forEach((card) => {
+      gsap.fromTo(
+        card,
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 88%",
+          },
+        }
+      );
     });
   }, []);
 
@@ -66,189 +99,48 @@ const Works = () => {
         />
       </div>
 
-      <section className="space-y-10 mt-32">
-        <section className="flex flex-col h-fit md:flex-row text-black">
-          <div className="w-full md:w-1/2 overflow-clip">
-            <div
-              style={{
-                padding: "54.72% 0 0 0",
-                position: "relative",
-              }}
-            >
-              <iframe
-                src="https://www.youtube.com/embed/c9MwU8sbbG0"
-                allow="autoplay;"
-                allowFullScreen
-                title="Doja demo"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
+      <section className="mt-20 md:mt-32 border-t border-t-black">
+        {projects.map((project) => (
+          <div
+            key={project.name}
+            className="project-card border-b border-b-black py-8 md:py-10 px-5 md:px-8 grid grid-cols-1 md:grid-cols-[64px_1fr] gap-x-6 gap-y-4"
+          >
+            <span className="label-mono text-sm text-muted-text">
+              {project.index}
+            </span>
 
-              {/* <iframe
-                src="https://player.vimeo.com/video/1088693434?h=9afbbff12c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                allowFullScreen
-                title=""
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                }}
-              /> */}
-            </div>
-          </div>
+            <div className="space-y-4">
+              <div className="flex flex-wrap items-baseline justify-between gap-3">
+                <h3 className="font-display text-3xl md:text-4xl font-light">
+                  {project.name}
+                </h3>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={project.href}
+                  className="label-mono bracket-label press hover-ink text-sm text-muted-text"
+                >
+                  View Repo
+                </a>
+              </div>
 
-          <div className="px-5 md:px-8 py-8 flex max-lg:gap-2.5 flex-col lg:flex-row justify-end lg:justify-between items-end flex-1">
-            <div className="max-lg:w-full h-fit lg:h-full flex flex-row lg:flex-col justify-start lg:justify-end gap-3 lg:gap-5">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.doja.studio/"
-                className="lg:[writing-mode:sideways-lr] text-gray-400 hover:text-black duration-300 transition-all"
-              >
-                {" "}
-                {"[ View Site ]"}{" "}
-              </a>
-              <p className="lg:[writing-mode:sideways-lr] font-medium">
-                {"[ DOJA STUDIO ]"}
+              <p className="font-light max-w-[640px] text-sm md:text-base">
+                {project.description}
               </p>
-            </div>
 
-            <p
-              id="dojaText"
-              className="w-full lg:max-w-[380px] ml-auto font-light"
-            >
-              {/* Doja Studio explores the intersection of creativity and commerce,
-              using innovative design and strategic thinking to evoke meaningful
-              connections between brands and their audiences. */}
-            </p>
-          </div>
-        </section>
-
-        <section className="flex flex-col-reverse md:flex-row text-black h-fit">
-          <div className="px-5 md:px-8 py-8 flex max-lg:gap-2.5 flex-col lg:flex-row justify-end lg:justify-between items-end flex-1">
-            <p
-              id="canadaText"
-              className="w-full lg:max-w-[380px] mr-auto font-light opacity-0"
-            >
-              SoftCanada bridges the gaps for seamless Canadian transitions,
-              providing newcomers with essential resources and support to
-              settle, succeed, and thrive in their new home.
-            </p>
-
-            <div className="max-lg:w-full h-fit lg:h-full flex flex-row lg:flex-col justify-start lg:justify-end gap-3 lg:gap-5">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://mysoftcanada.ca/"
-                className="lg:[writing-mode:sideways-lr] text-gray-400 hover:text-black duration-300 transition-all"
-              >
-                {" "}
-                {"[ View Site ]"}{" "}
-              </a>
-              <p className="lg:[writing-mode:sideways-lr] font-medium">
-                {" "}
-                {"[ SoftCanada ]"}{" "}
-              </p>
+              <ul className="flex flex-wrap gap-2 label-mono text-xs uppercase text-muted-text">
+                {project.stack.map((tech) => (
+                  <li key={tech} className="bracket-label">
+                    {tech}
+                  </li>
+                ))}
+                {project.status && (
+                  <li className="bracket-label diff-added">{project.status}</li>
+                )}
+              </ul>
             </div>
           </div>
-
-          <div className="w-full md:w-1/2 overflow-clip">
-            <div style={{ padding: "54.72% 0 0 0", position: "relative" }}>
-              <iframe
-                src="https://www.youtube.com/embed/Up7oCDZbha0"
-                allow="autoplay;"
-                allowFullScreen
-                title="Softcanada demo"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="flex flex-col md:flex-row text-black h-fit">
-          <div className="w-full md:w-1/2 overflow-clip">
-            <div style={{ padding: "54.72% 0 0 0", position: "relative" }}>
-              <iframe
-                src="https://www.youtube.com/embed/GC0zG_FNauM"
-                allow="autoplay;"
-                allowFullScreen
-                title="Auditbar Demo"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
-            </div>
-          </div>
-
-          <div className="px-5 md:px-8 py-8 flex max-lg:gap-2.5 flex-col lg:flex-row justify-end lg:justify-between items-end flex-1">
-            <div className="max-lg:w-full lg:h-full flex flex-row lg:flex-col justify-start lg:justify-end gap-3 lg:gap-5">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://auditbar.com/"
-                className="lg:[writing-mode:sideways-lr] text-gray-400 hover:text-black duration-300 transition-all"
-              >
-                {" "}
-                {"[ View Site ]"}{" "}
-              </a>
-              <p className="lg:[writing-mode:sideways-lr] font-medium">
-                {"[ Auditbar ]"}
-              </p>
-            </div>
-
-            <p
-              id="auditbarText"
-              className="w-full lg:max-w-[380px] ml-auto font-light"
-            >
-              {/* Auditbar turns invoicing headaches and simplifies inventory
-              management into effortless growth, giving small businesses the
-              tools to sell, track, and scale beyond their daily struggles. */}
-            </p>
-          </div>
-        </section>
-
-        {/* <section className="flex flex-col-reverse md:flex-row text-black">
-          <div className="px-5 md:px-8 py-8 md:h-[450px] flex max-lg:gap-2.5 flex-col lg:flex-row justify-end lg:justify-between items-end flex-1">
-            <p className="w-full lg:max-w-[380px] mr-auto font-light">
-              Forma is a collection of minimalist, functional designs created
-              for digital experiences. Focused on clean lines and effortless
-              usability, this project bridges the gap between art and intuitive
-              interaction.
-            </p>
-
-            <div className="max-lg:w-full h-fit lg:h-full flex flex-row lg:flex-col justify-start lg:justify-end gap-3 lg:gap-5">
-              <p className="lg:[writing-mode:sideways-lr] text-gray-400">
-                {" "}
-                {"[ 2022 ]"}{" "}
-              </p>
-              <p className="lg:[writing-mode:sideways-lr] font-medium">
-                {" "}
-                {"[ FORMA ]"}{" "}
-              </p>
-            </div>
-          </div>
-          <div className="w-full h-[390px] md:w-1/2 md:h-[450px] overflow-clip">
-            <img src={dummyImgFour} alt="dummyImgFour" className="" />
-          </div>
-        </section> */}
+        ))}
       </section>
     </section>
   );

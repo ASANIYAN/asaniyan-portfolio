@@ -22,9 +22,6 @@ const Footer = () => {
               <UnderlineAnimation handleClick={() => scrollToSection("works")}>
                 WORKS
               </UnderlineAnimation>
-              <UnderlineAnimation handleClick={() => scrollToSection("oss")}>
-                OSS
-              </UnderlineAnimation>
               <UnderlineAnimation
                 handleClick={() => scrollToSection("contact")}
               >
@@ -38,7 +35,7 @@ const Footer = () => {
             </a>
           </li>
           <li className="flex justify-center items-center max-md:h-[86px]">
-            {"[ © ]"} {"[ 2025 ]"}{" "}
+            {"[ © ]"} {`[ ${new Date().getFullYear()} ]`}{" "}
           </li>
         </ul>
       </section>

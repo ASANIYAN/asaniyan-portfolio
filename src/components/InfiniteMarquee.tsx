@@ -42,6 +42,10 @@ const InfiniteMarquee: React.FC<MarqueeProps> = ({
   useEffect(() => {
     if (!marqueeRef.current || !contentRef.current) return;
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
     // Clone the content
     const contentClone = contentRef.current.cloneNode(true) as HTMLDivElement;
     marqueeRef.current.appendChild(contentClone);
