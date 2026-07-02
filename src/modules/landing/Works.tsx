@@ -23,7 +23,8 @@ type Project = {
   name: string;
   description: string;
   stack: string[];
-  href: string;
+  live?: string;
+  repo?: string;
   status?: string;
 };
 
@@ -34,7 +35,8 @@ const projects: Project[] = [
     description:
       "A real-time collaborative document editor — Google Docs–style continuous prose. Yjs CRDT sync over WebSocket, Redis pub/sub fan-out across server instances, and an AI chatbot that edits documents directly via Yjs operations.",
     stack: ["React", "NestJS", "Yjs / CRDT", "Redis", "PostgreSQL", "WebSockets"],
-    href: "https://github.com/ASANIYAN/Meridian",
+    live: "https://meri-dian.vercel.app",
+    repo: "https://github.com/ASANIYAN/Meridian",
   },
   {
     index: "02",
@@ -42,7 +44,8 @@ const projects: Project[] = [
     description:
       "Production-grade URL shortener and analytics platform. Modular NestJS monolith on Fastify, Redis Streams for async click-tracking with a dedicated worker process, JWT + OTP authentication with refresh tokens.",
     stack: ["React", "NestJS", "Fastify", "Redis", "PostgreSQL"],
-    href: "https://github.com/ASANIYAN/lyncs-frontend",
+    live: "https://lyncss.vercel.app/",
+    repo: "https://github.com/ASANIYAN/lyncs-frontend",
   },
   {
     index: "03",
@@ -50,7 +53,7 @@ const projects: Project[] = [
     description:
       "A payment processing API with a domain-driven, layered architecture: state-machine payment lifecycle, idempotency keys, circuit breaker for external bank calls, and background jobs for stuck-payment recovery.",
     stack: ["Express", "TypeScript", "PostgreSQL"],
-    href: "https://github.com/ASANIYAN/payment-gateway",
+    repo: "https://github.com/ASANIYAN/payment-gateway",
   },
   {
     index: "04",
@@ -58,7 +61,15 @@ const projects: Project[] = [
     description:
       "AI-powered interior design platform — users upload imagery, choose design criteria, and get instant AI-generated visual feedback via Replicate API integrations.",
     stack: ["React", "TanStack Query", "Express", "PostgreSQL", "Replicate API"],
-    href: "https://github.com/ASANIYAN",
+    live: "https://magikinterior.com/",
+  },
+  {
+    index: "05",
+    name: "Unred",
+    description:
+      "An online editorial magazine platform with a structured content submission and publishing workflow — built on Next.js with a Sanity-backed CMS.",
+    stack: ["Next.js", "TypeScript", "GSAP", "Sanity"],
+    live: "https://unred.co",
   },
 ];
 
@@ -114,14 +125,28 @@ const Works = () => {
                 <h3 className="font-display text-3xl md:text-4xl font-light">
                   {project.name}
                 </h3>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={project.href}
-                  className="label-mono bracket-label press hover-ink text-sm text-muted-text"
-                >
-                  View Repo
-                </a>
+                <div className="flex gap-4">
+                  {project.live && (
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={project.live}
+                      className="label-mono bracket-label press hover-ink text-sm text-muted-text"
+                    >
+                      Live Site
+                    </a>
+                  )}
+                  {project.repo && (
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={project.repo}
+                      className="label-mono bracket-label press hover-ink text-sm text-muted-text"
+                    >
+                      View Repo
+                    </a>
+                  )}
+                </div>
               </div>
 
               <p className="font-light max-w-[640px] text-sm md:text-base">
