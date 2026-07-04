@@ -22,7 +22,7 @@ const BlogList = () => {
 
       <section className="w-full max-w-[1400px] mx-auto mt-16 md:mt-[88px] px-5 text-text">
         <h1 className="font-display text-6xl md:text-8xl font-light mb-10">
-          Writing
+          Musings
         </h1>
 
         {isLoading && (

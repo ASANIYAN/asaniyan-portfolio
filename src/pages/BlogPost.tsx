@@ -78,7 +78,7 @@ const BlogPost = () => {
           to="/blog"
           className="label-mono bracket-label press hover-ink text-sm text-muted-text"
         >
-          Back to writing
+          Back to musings
         </Link>
 
         {isLoading && (
