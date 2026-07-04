@@ -1,10 +1,16 @@
 import UnderlineAnimation from "@/components/UnderlineAnimation";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   function scrollToSection(id: string) {
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      return;
+    }
+
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
