@@ -1,6 +1,6 @@
 # Asaniyan Portfolio
 
-Personal site for Ayomide Asaniyan — work experience, projects, and (soon) writing.
+Personal site for Ayomide Asaniyan — work experience, projects, and (soon) musings.
 
 ## Stack
 
