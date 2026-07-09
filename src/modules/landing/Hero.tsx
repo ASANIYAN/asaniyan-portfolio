@@ -85,6 +85,13 @@ const Hero = () => {
             >
               {"[ GITHUB ]"}
             </a>
+            <a
+              className="press hover-ink w-fit"
+              href="/Asaniyan_Ayomide_Paul_CV.pdf"
+              download="Asaniyan_Ayomide_Paul_CV.pdf"
+            >
+              {"[ RESUME ]"}
+            </a>
           </div>
         </section>
       </section>
