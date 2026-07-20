@@ -3,11 +3,12 @@ import { Link, useParams } from "react-router-dom";
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import Navbar from "@/modules/landing/Navbar";
 import Footer from "@/modules/landing/Footer";
+import CodeBlock from "@/components/CodeBlock";
 import {
   postBySlugQuery,
   sanityClient,
   urlFor,
-  type CodeBlock,
+  type CodeBlock as SanityCodeBlock,
   type PostDetail,
 } from "@/lib/sanity";
 
@@ -26,10 +27,8 @@ const portableTextComponents: PortableTextComponents = {
         className="w-full my-6"
       />
     ),
-    code: ({ value }: { value: CodeBlock }) => (
-      <pre className="label-mono text-sm bg-surface border border-black p-4 my-6 overflow-x-auto">
-        <code>{value.code}</code>
-      </pre>
+    code: ({ value }: { value: SanityCodeBlock }) => (
+      <CodeBlock code={value.code} language={value.language} />
     ),
   },
   block: {
