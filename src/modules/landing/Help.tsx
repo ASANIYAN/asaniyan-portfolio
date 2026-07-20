@@ -10,7 +10,7 @@ const Help = () => {
     },
     {
       title: "Craft",
-      options: ["REAL-TIME SYSTEMS", "TESTING (JEST/VITEST)", "GSAP"],
+      options: ["REAL TIME SYSTEMS", "TESTING (JEST/VITEST)", "GSAP"],
     },
   ];
 

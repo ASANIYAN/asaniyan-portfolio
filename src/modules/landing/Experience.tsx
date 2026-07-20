@@ -14,7 +14,7 @@ const experience: ExperienceEntry[] = [
     start: "JUN 2024",
     end: "MAY 2026",
     bullets: [
-      "Owned development of customer-facing transaction and administrative dashboards used in production.",
+      "Owned development of customer facing transaction and administrative dashboards used in production.",
       "Built reusable React components and frontend architecture to improve scalability and maintainability.",
       "Collaborated with backend engineers and designers to deliver secure financial workflows.",
     ],
@@ -25,8 +25,8 @@ const experience: ExperienceEntry[] = [
     start: "DEC 2023",
     end: "JUN 2024",
     bullets: [
-      "Built a responsive ERP-style dashboard for clinics and pharmacies — real-time patient records, prescriptions, inventory, billing, and operational analytics.",
-      "Improved accessibility and performance with low-bandwidth optimisations, adhering strictly to WCAG 2.1 AA standards.",
+      "Built a responsive ERP style dashboard for clinics and pharmacies, real time patient records, prescriptions, inventory, billing, and operational analytics.",
+      "Improved accessibility and performance with low bandwidth optimisations, adhering strictly to WCAG 2.1 AA standards.",
       "Developed inventory and revenue analytics tracking drug sales and operational metrics.",
     ],
   },
@@ -36,9 +36,9 @@ const experience: ExperienceEntry[] = [
     start: "JAN 2023",
     end: "DEC 2023",
     bullets: [
-      "Built a mobile-optimised, high-conversion storefront experience.",
+      "Built a mobile optimised, high conversion storefront experience.",
       "Designed and engineered an automated customer invoicing system that streamlined payment workflows.",
-      "Translated Figma designs into responsive, production-ready interfaces while maintaining design system consistency.",
+      "Translated Figma designs into responsive, production ready interfaces while maintaining design system consistency.",
     ],
     delta: { sign: "added", text: "3x increase in client inbound sales opportunities" },
   },
