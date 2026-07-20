@@ -9,7 +9,7 @@ gsap.registerPlugin(SplitText);
 const Hero = () => {
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReducedMotion) return;
 
@@ -51,7 +51,7 @@ const Hero = () => {
           <section className="flex justify-between md:hidden mt-6">
             <div className="flex flex-col">
               <p className="text-sm text-white"> {"[ ASANIYAN ]"} </p>
-              <p className="text-sm  text-white"> {"[ 2025 ]"} </p>
+              <p className="text-sm text-white"> {"[ 2025 ]"} </p>
             </div>
             <ArrowRight size="32" color="#fff" />
           </section>
@@ -62,11 +62,11 @@ const Hero = () => {
         <section className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-5 text-black">
           <div className="w-full md:w-[73.3%] max-md:px-5 max-md:border-b max-md:border-b-black md:border-r md:border-r-black py-5">
             <p className="w-full max-w-[427px] text-xl font-light">
-              If your product needs real-time features that hold up under
-              load — or a backend that won't fall over when it matters —
-              I'm Ayomide Asaniyan, a software engineer with 3+ years shipping
-              production React, Next.js, and NestJS applications end-to-end,
-              from database schema to deployed UI.
+              I'm Ayomide Asaniyan, a Software Engineer with 3+ years of
+              experience building production web applications with React,
+              Next.js, NestJS, and PostgreSQL. I build features end to end, from
+              designing database schemas and APIs to delivering polished user
+              interfaces and production deployments.
             </p>
           </div>
           <div className="flex-1 flex flex-col gap-2 text-sm py-5 max-md:px-5 w-full label-mono">
