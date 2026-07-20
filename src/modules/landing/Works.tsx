@@ -33,7 +33,7 @@ const projects: Project[] = [
     index: "01",
     name: "Ligature",
     description:
-      "Share one link and play a full game of Scrabble with a friend — no signup, no lobby, real board rules and dictionary validation enforced as you move. Under the hood: a framework-free rules engine shared between a NestJS + WebSocket server (the single source of truth on game state) and the React client, which runs the same engine locally so your move lands instantly instead of waiting on a round trip.",
+      "Share one link and play a full game of Scrabble with a friend, no signup, no lobby, real board rules and dictionary validation enforced as you move. Under the hood: a framework free rules engine shared between a NestJS + WebSocket server (the single source of truth on game state) and the React client, which runs the same engine locally so your move lands instantly instead of waiting on a round trip.",
     stack: ["React", "NestJS", "WebSockets", "Drizzle ORM", "PostgreSQL", "TypeScript"],
     live: "https://ligature-server.onrender.com/",
     repo: "https://github.com/ASANIYAN/Ligature",
@@ -42,7 +42,7 @@ const projects: Project[] = [
     index: "02",
     name: "Meridian",
     description:
-      "Edit the same document as someone else and watch their changes land in real time, Google Docs–style — plus an AI chatbot that edits the document directly through the same sync layer instead of just replying in a side panel. Yjs CRDTs resolve conflicting edits, Redis pub/sub keeps every server instance in sync so it holds up across multiple instances, not just one.",
+      "Edit the same document as someone else and watch their changes land in real time, Google Docs style, plus an AI chatbot that edits the document directly through the same sync layer instead of just replying in a side panel. Yjs CRDTs resolve conflicting edits, Redis pub/sub keeps every server instance in sync so it holds up across multiple instances, not just one.",
     stack: ["React", "NestJS", "Yjs / CRDT", "Redis", "PostgreSQL", "WebSockets"],
     live: "https://meri-dian.vercel.app",
     repo: "https://github.com/ASANIYAN/Meridian",
@@ -60,7 +60,7 @@ const projects: Project[] = [
     index: "04",
     name: "Payment Gateway",
     description:
-      "A payment processing API with a domain-driven, layered architecture: state-machine payment lifecycle, idempotency keys, circuit breaker for external bank calls, and background jobs for stuck-payment recovery.",
+      "A payment processing API with a domain driven, layered architecture: state machine payment lifecycle, idempotency keys, circuit breaker for external bank calls, and background jobs for stuck payment recovery.",
     stack: ["Express", "TypeScript", "PostgreSQL"],
     repo: "https://github.com/ASANIYAN/payment-gateway",
   },
@@ -68,7 +68,7 @@ const projects: Project[] = [
     index: "05",
     name: "MagikInterior",
     description:
-      "AI-powered interior design platform — users upload imagery, choose design criteria, and get instant AI-generated visual feedback via Replicate API integrations.",
+      "AI powered interior design platform, users upload imagery, choose design criteria, and get instant AI generated visual feedback via Replicate API integrations.",
     stack: ["React", "TanStack Query", "Express", "PostgreSQL", "Replicate API"],
     live: "https://magikinterior.com/",
   },
@@ -76,7 +76,7 @@ const projects: Project[] = [
     index: "06",
     name: "Unred",
     description:
-      "An online editorial magazine platform with a structured content submission and publishing workflow — built on Next.js with a Sanity-backed CMS.",
+      "An online editorial magazine platform with a structured content submission and publishing workflow, built on Next.js with a Sanity backed CMS.",
     stack: ["Next.js", "TypeScript", "GSAP", "Sanity"],
     live: "https://unred.co",
   },
