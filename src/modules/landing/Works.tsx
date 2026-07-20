@@ -31,6 +31,15 @@ type Project = {
 const projects: Project[] = [
   {
     index: "01",
+    name: "Ligature",
+    description:
+      "A real-time multiplayer Scrabble implementation with real board rules, scoring, and dictionary validation. Two players share a link to play, no signup required. Pnpm workspace split into a framework-free rules engine, a NestJS + WebSocket server that holds authoritative game state, and a React client that runs the same engine locally for instant feedback.",
+    stack: ["React", "NestJS", "WebSockets", "Drizzle ORM", "PostgreSQL", "TypeScript"],
+    live: "https://ligature-server.onrender.com/",
+    repo: "https://github.com/ASANIYAN/Ligature",
+  },
+  {
+    index: "02",
     name: "Meridian",
     description:
       "A real-time collaborative document editor — Google Docs–style continuous prose. Yjs CRDT sync over WebSocket, Redis pub/sub fan-out across server instances, and an AI chatbot that edits documents directly via Yjs operations.",
@@ -39,7 +48,7 @@ const projects: Project[] = [
     repo: "https://github.com/ASANIYAN/Meridian",
   },
   {
-    index: "02",
+    index: "03",
     name: "Lyncs",
     description:
       "Production-grade URL shortener and analytics platform. Modular NestJS monolith on Fastify, Redis Streams for async click-tracking with a dedicated worker process, JWT + OTP authentication with refresh tokens.",
@@ -48,7 +57,7 @@ const projects: Project[] = [
     repo: "https://github.com/ASANIYAN/lyncs-frontend",
   },
   {
-    index: "03",
+    index: "04",
     name: "Payment Gateway",
     description:
       "A payment processing API with a domain-driven, layered architecture: state-machine payment lifecycle, idempotency keys, circuit breaker for external bank calls, and background jobs for stuck-payment recovery.",
@@ -56,7 +65,7 @@ const projects: Project[] = [
     repo: "https://github.com/ASANIYAN/payment-gateway",
   },
   {
-    index: "04",
+    index: "05",
     name: "MagikInterior",
     description:
       "AI-powered interior design platform — users upload imagery, choose design criteria, and get instant AI-generated visual feedback via Replicate API integrations.",
@@ -64,7 +73,7 @@ const projects: Project[] = [
     live: "https://magikinterior.com/",
   },
   {
-    index: "05",
+    index: "06",
     name: "Unred",
     description:
       "An online editorial magazine platform with a structured content submission and publishing workflow — built on Next.js with a Sanity-backed CMS.",
