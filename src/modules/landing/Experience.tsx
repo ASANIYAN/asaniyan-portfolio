@@ -14,9 +14,9 @@ const experience: ExperienceEntry[] = [
     start: "JUN 2024",
     end: "MAY 2026",
     bullets: [
-      "Owned development of customer facing transaction and administrative dashboards used in production.",
-      "Built reusable React components and frontend architecture to improve scalability and maintainability.",
-      "Collaborated with backend engineers and designers to deliver secure financial workflows.",
+      "Owned the customer facing transaction and admin dashboards for a product used by 1,000+ people, processing over $15,000 in transaction volume. Because the numbers on screen are someone's money, I treated edge cases and error states as first class work, not follow up fixes.",
+      "Built the component and frontend architecture other engineers built on top of, so new dashboard views could ship faster as the product grew.",
+      "Worked directly with backend engineers and designers to ship financial workflows, where a UI bug means an incorrect balance, not just a display issue.",
     ],
   },
   {
@@ -25,9 +25,9 @@ const experience: ExperienceEntry[] = [
     start: "DEC 2023",
     end: "JUN 2024",
     bullets: [
-      "Built a responsive ERP style dashboard for clinics and pharmacies, real time patient records, prescriptions, inventory, billing, and operational analytics.",
-      "Improved accessibility and performance with low bandwidth optimisations, adhering strictly to WCAG 2.1 AA standards.",
-      "Developed inventory and revenue analytics tracking drug sales and operational metrics.",
+      "Built a real time ERP style dashboard for clinics and pharmacies — patient records, prescriptions, inventory, and billing all live in the same view, updating as staff worked instead of requiring a page refresh.",
+      "Held the interface to WCAG 2.1 AA and optimised it for low bandwidth connections, because the clinics running it weren't on reliable fiber. Without that work, staff would have avoided the tool instead of using it.",
+      "Built the inventory and revenue analytics tracking drug sales and operational metrics, giving pharmacy staff visibility they'd previously had to reconstruct by hand.",
     ],
   },
   {
@@ -36,9 +36,9 @@ const experience: ExperienceEntry[] = [
     start: "JAN 2023",
     end: "DEC 2023",
     bullets: [
-      "Built a mobile optimised, high conversion storefront experience.",
-      "Designed and engineered an automated customer invoicing system that streamlined payment workflows.",
-      "Translated Figma designs into responsive, production ready interfaces while maintaining design system consistency.",
+      "Built a mobile first storefront that became the primary sales channel for 500+ customers.",
+      "Designed and built an automated invoicing system that replaced manual payment follow up, which was part of what drove the increase below.",
+      "Translated Figma designs into production interfaces while keeping the design system consistent as the storefront grew.",
     ],
     delta: { sign: "added", text: "3x increase in client inbound sales opportunities" },
   },
